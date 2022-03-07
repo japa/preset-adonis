@@ -99,6 +99,10 @@
     "contents": ".",
     "anyBranch": false
   },
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest"
+  },
   "dependencies": {
     "@japa/assert": "^1.2.4",
     "@japa/run-failed-tests": "^1.0.5",
