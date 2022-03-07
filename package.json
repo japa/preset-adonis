@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "description": "Preset for AdonisJS",
   "main": "index.js",
+  "files": [
+    "build/index.d.ts",
+    "build/index.js"
+  ],
   "scripts": {
     "mrm": "mrm --preset=@adonisjs/mrm-preset",
     "pretest": "npm run lint",
@@ -56,11 +60,6 @@
     ],
     "runGhActionsOnWindows": false
   },
-  "files": [
-    "build/src",
-    "build/index.d.ts",
-    "build/index.js"
-  ],
   "eslintConfig": {
     "extends": [
       "plugin:adonis/typescriptPackage",
@@ -99,5 +98,10 @@
   "np": {
     "contents": ".",
     "anyBranch": false
+  },
+  "dependencies": {
+    "@japa/assert": "^1.2.4",
+    "@japa/run-failed-tests": "^1.0.5",
+    "@japa/spec-reporter": "^1.1.10"
   }
 }
