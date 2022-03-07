@@ -2,11 +2,15 @@
   "name": "@japa/preset-adonis",
   "version": "1.0.0",
   "description": "Preset for AdonisJS",
-  "main": "index.js",
+  "main": "build/index.js",
   "files": [
     "build/index.d.ts",
     "build/index.js"
   ],
+  "exports": {
+    ".": "./build/index.js"
+  },
+  "types": "./build/index.d.ts",
   "scripts": {
     "mrm": "mrm --preset=@adonisjs/mrm-preset",
     "pretest": "npm run lint",
