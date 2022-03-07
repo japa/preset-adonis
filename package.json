@@ -103,5 +103,13 @@
     "@japa/assert": "^1.2.4",
     "@japa/run-failed-tests": "^1.0.5",
     "@japa/spec-reporter": "^1.1.10"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/japa/preset-adonis.git"
+  },
+  "bugs": {
+    "url": "https://github.com/japa/preset-adonis/issues"
+  },
+  "homepage": "https://github.com/japa/preset-adonis#readme"
 }
