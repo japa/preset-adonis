@@ -14,6 +14,12 @@
       "types": "./build/index.d.ts",
       "require": "./build/index.js"
     },
+    "./TestsProvider": {
+      "types": [
+        "./build/adonis-typings/index.d.ts"
+      ],
+      "require": "./build/providers/TestsProvider/index.js"
+    },
     "./*": {
       "types": [
         "./build/adonis-typings/index.d.ts"
@@ -119,10 +125,10 @@
     "tag": "latest"
   },
   "dependencies": {
-    "@japa/api-client": "^1.0.0",
-    "@japa/assert": "^1.3.0",
-    "@japa/run-failed-tests": "^1.0.5",
-    "@japa/spec-reporter": "^1.1.10"
+    "@japa/api-client": "^1.0.1",
+    "@japa/assert": "^1.3.1",
+    "@japa/run-failed-tests": "^1.0.6",
+    "@japa/spec-reporter": "^1.1.11"
   },
   "peerDependencies": {
     "@adonisjs/core": "^5.0.0"
@@ -134,5 +140,8 @@
   "bugs": {
     "url": "https://github.com/japa/preset-adonis/issues"
   },
-  "homepage": "https://github.com/japa/preset-adonis#readme"
+  "homepage": "https://github.com/japa/preset-adonis#readme",
+  "adonisjs": {
+    "types": "@japa/preset-adonis/build/adonis-typings/index"
+  }
 }
