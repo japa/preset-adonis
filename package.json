@@ -1,6 +1,6 @@
 {
   "name": "@japa/preset-adonis",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Preset for AdonisJS",
   "main": "build/index.js",
   "files": [
@@ -15,7 +15,9 @@
       "require": "./build/index.js"
     },
     "./*": {
-      "types": ["./build/adonis-typings/index.d.ts"],
+      "types": [
+        "./build/adonis-typings/index.d.ts"
+      ],
       "require": "./*"
     }
   },
