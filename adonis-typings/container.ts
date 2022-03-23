@@ -9,11 +9,12 @@
 
 declare module '@ioc:Adonis/Core/Application' {
   import type { Assert } from '@japa/assert'
-  import type { ApiRequest, ApiResponse } from '@japa/api-client'
+  import type { ApiRequest, ApiResponse, ApiClient } from '@japa/api-client'
 
   export interface ContainerBindings {
     'Japa/Preset/Assert': typeof Assert
     'Japa/Preset/ApiRequest': typeof ApiRequest
+    'Japa/Preset/ApiClient': typeof ApiClient
     'Japa/Preset/ApiResponse': typeof ApiResponse
   }
 }

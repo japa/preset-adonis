@@ -21,6 +21,11 @@ export default class TestsProvider {
       return Assert
     })
 
+    this.app.container.bind('Japa/Preset/ApiClient', () => {
+      const { ApiClient } = require('@japa/api-client')
+      return ApiClient
+    })
+
     this.app.container.bind('Japa/Preset/ApiRequest', () => {
       const { ApiRequest } = require('@japa/api-client')
       return ApiRequest
