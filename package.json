@@ -1,6 +1,6 @@
 {
   "name": "@japa/preset-adonis",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Preset for AdonisJS",
   "main": "build/index.js",
   "files": [
