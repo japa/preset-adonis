@@ -8,5 +8,6 @@
  */
 
 export { assert } from '@japa/assert'
+export { apiClient } from '@japa/api-client'
 export { specReporter } from '@japa/spec-reporter'
 export { runFailedTests } from '@japa/run-failed-tests'
