@@ -10,10 +10,15 @@
     "build/adonis-typings"
   ],
   "exports": {
-    ".": "./build/index.js",
-    "./*": "./*"
+    ".": {
+      "types": "./build/index.d.ts",
+      "require": "./build/index.js"
+    },
+    "./*": {
+      "types": ["./build/adonis-typings/index.d.ts"],
+      "require": "./*"
+    }
   },
-  "types": "./build/adonis-typings/index.d.ts",
   "scripts": {
     "mrm": "mrm --preset=@adonisjs/mrm-preset",
     "pretest": "npm run lint",
