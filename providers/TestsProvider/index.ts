@@ -16,6 +16,16 @@ export default class TestsProvider {
   constructor(protected app: ApplicationContract) {}
 
   public register() {
+    this.app.container.bind('Japa/Preset/Test', () => {
+      const { Test } = require('@japa/runner')
+      return Test
+    })
+
+    this.app.container.bind('Japa/Preset/TestContext', () => {
+      const { TestContext } = require('@japa/runner')
+      return TestContext
+    })
+
     this.app.container.bind('Japa/Preset/Assert', () => {
       const { Assert } = require('@japa/assert')
       return Assert
