@@ -46,4 +46,15 @@ export default class TestsProvider {
       return ApiResponse
     })
   }
+
+  public boot() {
+    this.app.container.withBindings(
+      ['Adonis/Core/Route', 'Japa/Preset/TestContext'],
+      (Route, TestContext) => {
+        TestContext.macro('route', function (routeIdentifier: string, params?: any, options?: any) {
+          return Route.makeUrl(routeIdentifier, params, options)
+        })
+      }
+    )
+  }
 }
