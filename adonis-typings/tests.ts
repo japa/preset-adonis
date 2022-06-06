@@ -19,3 +19,13 @@ declare module '@japa/runner' {
     ): string
   }
 }
+
+declare module '@japa/api-client' {
+  interface ApiResponse {
+    assertRedirectsToRoute(
+      routeIdentifier: string,
+      params?: Record<string, any> | any[],
+      options?: MakeUrlOptions
+    ): string
+  }
+}

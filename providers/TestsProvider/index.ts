@@ -49,11 +49,18 @@ export default class TestsProvider {
 
   public boot() {
     this.app.container.withBindings(
-      ['Adonis/Core/Route', 'Japa/Preset/TestContext'],
-      (Route, TestContext) => {
+      ['Adonis/Core/Route', 'Japa/Preset/TestContext', 'Japa/Preset/ApiResponse'],
+      (Route, TestContext, Response) => {
         TestContext.macro('route', function (routeIdentifier: string, params?: any, options?: any) {
           return Route.makeUrl(routeIdentifier, params, options)
         })
+
+        Response.macro(
+          'assertRedirectsToRoute',
+          function (routeIdentifier: string, params?: any, options?: any) {
+            return this.assertRedirectsTo(Route.makeUrl(routeIdentifier, params, options))
+          }
+        )
       }
     )
   }
